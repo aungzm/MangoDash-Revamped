@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.mangodash.controller.LoginController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: #FFD7B5;">
+
+    <!-- Title Image at the Top -->
+    <ImageView fx:id="titleImageView" layoutX="200" layoutY="20" fitWidth="200" fitHeight="100"/>
+
+    <!-- Labels and Text Fields for Username and Password -->
+    <VBox alignment="CENTER" spacing="15" layoutX="150" layoutY="150">
+
+        <!-- Username Section -->
+        <Label fx:id="usernameLabel" text="Enter Username:"/>
+        <TextField fx:id="usernameInputField" promptText="Username" maxWidth="300"/>
+
+        <!-- Password Section -->
+        <Label fx:id="passwordLabel" text="Enter Password:"/>
+        <PasswordField fx:id="passwordInputField" promptText="Password" maxWidth="300"/>
+
+    </VBox>
+
+    <!-- Buttons at the Bottom -->
+    <HBox alignment="CENTER" spacing="20" layoutX="175" layoutY="300">
+        <Button fx:id="logIn" text="Log in" onAction="#handleLogin"
+                style="-fx-background-color: #FFB38A; -fx-text-fill: white;"/>
+
+        <Button fx:id="back" text="Back" onAction="#"
+                style="-fx-background-color: #FFB38A; -fx-text-fill: white;"/>
+    </HBox>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.mangodash.controller.SignupController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: #FFD7B5;">
+
+    <!-- Title for Signup Form -->
+    <Label text="Sign Up" layoutX="250" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- Signup Fields -->
+    <VBox alignment="CENTER" spacing="15" layoutX="150" layoutY="80">
+
+        <!-- Name Field -->
+        <Label text="Name:"/>
+        <TextField fx:id="nameInputField" promptText="Enter your name" maxWidth="300"/>
+
+        <!-- Username Field -->
+        <Label text="Username:"/>
+        <TextField fx:id="usernameInputField" promptText="Choose a username" maxWidth="300"/>
+
+        <!-- Bio Field -->
+        <Label text="Bio:"/>
+        <TextField fx:id="bioInputField" promptText="Write a short bio" maxWidth="300"/>
+
+        <!-- New Password Field -->
+        <Label text="Password:"/>
+        <PasswordField fx:id="newPassword" promptText="Choose a password" maxWidth="300"/>
+
+        <!-- Repeat Password Field -->
+        <Label text="Repeat Password:"/>
+        <PasswordField fx:id="repeatNewPassword" promptText="Re-enter your password" maxWidth="300"/>
+    </VBox>
+
+    <!-- Buttons for Signup and Back -->
+    <HBox alignment="CENTER" spacing="20" layoutX="200" layoutY="350">
+        <Button fx:id="signup" text="Sign up" onAction="#handleSignup"
+                style="-fx-background-color: #FFB38A; -fx-text-fill: white;"/>
+
+        <Button fx:id="back" text="Back" onAction="#handleBack"
+                style="-fx-background-color: #FFB38A; -fx-text-fill: white;"/>
+    </HBox>
+</AnchorPane>
